@@ -1,0 +1,139 @@
+h1 {
+    text-align: center;
+    color: rgb(21, 10, 10);
+    font-family: 'Courier New', Courier, monospace;
+    ;
+}
+
+input {
+    height: 25px;
+    width: 190px;
+    margin-left: 2px;
+    align-items: center;
+
+}
+
+#a {
+    height: 45px;
+    width: 180px;
+    margin: 0px 40%;
+    background-image: linear-gradient(to bottom, rgb(47, 0, 255) 20%, #0059ff 100%);
+    color: white;
+    font-size: 25px;
+    border: 0px;
+    border-radius: 3%;
+    margin-left: 27%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#a:hover {
+    border: 2px solid #142db8;
+}
+
+/* body {
+
+    background-size: 40%;
+    background-color: #0059ff; 
+
+     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("egadgets.jpg");
+    background-repeat: no-repeat;
+
+
+}  */
+body {
+    margin: 0;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.body-bg {
+    /* background-size: 100vh; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #0059ff;
+
+
+}
+
+.body-bg img {
+    height: 100vh;
+    width: 50%;
+
+}
+
+/*labels*/
+
+label {
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(21, 10, 10);
+    font-family: 'Courier New', Courier, monospace;
+    /* margin-left: 10px; */
+
+}
+
+/*signup div */
+.main-div {
+    background-color: whitesmoke;
+    height: 80%;
+    width: 380px;
+    padding: 0px 40px;
+    position: absolute;
+    top: 5%;
+    left: 73%;
+    bottom: 30%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 2;
+    border-radius: 25px;
+
+}
+
+.all-sdiv {
+    display: flex;
+}
+
+#text-reg {
+    color: white;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 80px;
+    margin-left: 15px;
+
+}
+
+#home {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    height: 50px;
+    width: 160px;
+    font-size: 20px;
+
+}
+
+svg {
+    margin-left: 7%;
+    margin-right: 5.6%;
+    transition: transform 310ms ease-in-out;
+}
+
+svg:hover {
+    transform: scale(1.2, 1.2);
+    border-radius: 5%;
+    color: purple;
+    /* box-shadow: 0 2px 2px 0 rgba(229, 7, 7, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+/*long input */
+.longinput {
+    height: 25px;
+    width: 400px;
+    margin-left: 2px;
+    align-items: center;
+}
+
+table {
+    margin-left: -13px;
+}

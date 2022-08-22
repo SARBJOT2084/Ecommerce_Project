@@ -1,0 +1,85 @@
+button {
+    margin-left: 30%;
+    width: 40%;
+    height: 40px;
+    color: white;
+    background-image: linear-gradient(to bottom, #0f24af 0%, #0022ff 100%);
+    ;
+    font-weight: bold;
+    font-size: 15px;
+    border: 0px;
+    border-radius: 3px;
+
+}
+
+.forgot {
+    font-size: 20px;
+    color: blue;
+    margin-left: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+
+}
+
+
+
+label {
+    font-size: 20px;
+    height: 20px;
+    margin-left: 10%;
+}
+
+input {
+    font-size: 14px;
+    height: 30px;
+    margin-left: 10%;
+    width: 220px;
+}
+
+
+
+#main-div {
+    height: 500px;
+    width: 450px;
+    box-shadow: 4px 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 60%;
+
+    margin-top: -25%;
+    z-index: 2;
+    background-color: white;
+    border-radius: 15px;
+
+}
+
+#imgi {
+    height: 350px;
+    width: 350px;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(21, 10, 10);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("login_bg.jpg");
+    ;
+
+} */
+
+.register {
+    margin-left: 30%;
+    text-decoration: none;
+    font-size: 20px;
+    color: blue;
+}
+
+#log {
+    margin-left: 15%;
+    margin-top: -4%;
+}

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Categories</title>
+    <style>
+        /* body {
+            background-color: rgb(195, 195, 195);
+        } */
+
+        #smartphones {
+            /* color: rgb(192, 186, 186); */
+            width: 85%;
+            margin-left: 5%;
+            height: 220px;
+            /* box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            ; */
+            margin-bottom: 2%;
+            display: flex;
+
+        }
+
+        #smartphones div {
+            color: white;
+            box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            ;
+            height: 180px;
+            width: 180px;
+            margin-left: 4%;
+            border-radius: 5%;
+            margin-top: 10px;
+            transition: transform 310ms ease-in-out;
+
+        }
+
+        #smartphones div img {
+            width: 120px;
+            margin-left: 20%;
+            margin-top: 4%;
+            height: 120px;
+        }
+
+        #smartphones div:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        #laptops {
+            color: whitesmoke;
+            width: 85%;
+            margin-left: 5%;
+            height: 220px;
+            /* box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            ; */
+            margin-bottom: 2%;
+            display: flex;
+        }
+
+        #laptops div {
+            color: white;
+            box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            ;
+            height: 180px;
+            width: 180px;
+            margin-left: 4%;
+            border-radius: 5%;
+            margin-top: 10px;
+            transition: transform 310ms ease-in-out;
+        }
+
+        #laptops div img {
+            width: 120px;
+            margin-left: 20%;
+            margin-top: 4%;
+            height: 120px;
+        }
+
+        #laptops div:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        #tv {
+            color: whitesmoke;
+            width: 85%;
+            margin-left: 5%;
+            height: 220px;
+            /* box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            ; */
+            margin-bottom: 2%;
+            display: flex;
+        }
+
+        #tv div {
+            color: white;
+            box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            ;
+            height: 180px;
+            width: 180px;
+            margin-left: 4%;
+            border-radius: 5%;
+            margin-top: 10px;
+            transition: transform 310ms ease-in-out;
+        }
+
+        #tv div img {
+            width: 120px;
+            margin-left: 20%;
+            margin-top: 4%;
+            height: 120px;
+        }
+
+        #tv div:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        #refrigerator {
+            color: whitesmoke;
+            width: 85%;
+            margin-left: 5%;
+            height: 220px;
+            /* box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            ; */
+            margin-bottom: 2%;
+            display: flex;
+        }
+
+        #refrigerator div {
+            color: white;
+            box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            ;
+            height: 220px;
+            width: 180px;
+            margin-left: 4%;
+            border-radius: 5%;
+            margin-top: 10px;
+            transition: transform 310ms ease-in-out;
+        }
+
+        #refrigerator div img {
+            width: 120px;
+            margin-left: 20%;
+            margin-top: 4%;
+            height: 120px;
+        }
+
+        #refrigerator div:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        #hairdryer {
+            color: whitesmoke;
+            width: 85%;
+            margin-left: 5%;
+            height: 220px;
+            /* box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            ; */
+            margin-bottom: 2%;
+            display: flex;
+        }
+
+        #hairdryer div {
+            color: white;
+            box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            ;
+            height: 180px;
+            width: 180px;
+            margin-left: 4%;
+            border-radius: 5%;
+            margin-top: 10px;
+            transition: transform 310ms ease-in-out;
+        }
+
+        #hairdryer div img {
+            width: 120px;
+            margin-left: 20%;
+            margin-top: 4%;
+            height: 120px;
+        }
+
+        #hairdryer div:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        #microwaves {
+
+            color: whitesmoke;
+            width: 85%;
+            margin-left: 5%;
+            height: 220px;
+            /* box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            ; */
+            margin-bottom: 2%;
+            display: flex;
+        }
+
+        #microwaves div {
+            color: white;
+            box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            ;
+            height: 180px;
+            width: 180px;
+            margin-left: 4%;
+            border-radius: 5%;
+            margin-top: 10px;
+            transition: transform 310ms ease-in-out;
+
+        }
+
+        #microwaves div img {
+            width: 120px;
+            margin-left: 20%;
+            margin-top: 4%;
+            height: 120px;
+        }
+
+        #microwaves div:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        #PC {
+            color: whitesmoke;
+            width: 85%;
+            margin-left: 5%;
+            height: 220px;
+            /* box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            ; */
+            margin-bottom: 2%;
+            display: flex;
+        }
+
+        #PC div {
+            color: white;
+            box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            ;
+            height: 180px;
+            width: 180px;
+            margin-left: 4%;
+            margin-top: 10px;
+            border-radius: 5%;
+            transition: transform 310ms ease-in-out;
+        }
+
+        #PC div img {
+            width: 120px;
+            margin-left: 20%;
+            margin-top: 4%;
+            height: 120px;
+        }
+
+        #PC div:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        #speakers {
+            color: whitesmoke;
+            width: 85%;
+            margin-left: 5%;
+            height: 220px;
+            /* box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            ; */
+            margin-bottom: 2%;
+            display: flex;
+        }
+
+        #speakers div {
+            color: white;
+            box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            ;
+            height: 180px;
+            width: 180px;
+            margin-left: 4%;
+            margin-top: 10px;
+            border-radius: 5%;
+            transition: transform 310ms ease-in-out;
+        }
+
+        #speakers div:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        #speakers div img {
+            width: 120px;
+            margin-left: 20%;
+            margin-top: 4%;
+            height: 120px;
+        }
+
+        #accessories {
+            color: whitesmoke;
+            width: 85%;
+            margin-left: 5%;
+            height: 220px;
+            /* box-shadow: 0 4px 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            ; */
+            margin-bottom: 2%;
+            display: flex;
+        }
+
+        #accessories div {
+            color: white;
+            box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            ;
+            height: 180px;
+            width: 180px;
+            margin-left: 4%;
+            margin-top: 10px;
+            border-radius: 5%;
+            transition: transform 310ms ease-in-out;
+        }
+
+        #accessories div img {
+            width: 120px;
+            margin-left: 20%;
+            margin-top: 4%;
+            height: 120px;
+        }
+
+        #accessories div:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        #head {
+            color: #005eff;
+            font-size: 25px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        #smartphones-head {
+            margin-bottom: 4%;
+            margin-left: 4%;
+            font-size: 10px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="smartphones">
+        <p id="head">Smartphones</p>
+        <div><img src="1.jpg"><br>
+            <!-- <p style="color:black;">hello</p> -->
+        </div>
+        <div><img src="3.jpg"></div>
+
+        <div><img src="smart.jpg"></div>
+
+        <div><img src="5.png"></div>
+        <div><img src="6.jpg"></div>
+
+    </div>
+
+    <div id="laptops">
+        <p id="head">Laptops&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <div><img src="7.png"></div>
+        <div><img src="8.png"></div>
+        <div><img src="9.png"></div>
+        <div><img src="11.png"></div>
+        <div><img src="10.png"></div>
+    </div>
+
+    <div id="refrigerator">
+        <p id="head">Refrigerators</p>
+        <div><img src="13.jpg"></div>
+        <div><img src="14.jpg"></div>
+        <div><img src="15.jpg"></div>
+        <div><img src="16.jpg"></div>
+        <div><img src="17.jpg"></div>
+    </div>
+
+    <div id="speakers">
+        <p id="head">Speakers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <div><img src="23.jpg"></div>
+        <div><img src="19.jpg"></div>
+        <div><img src="20.jpg"></div>
+        <div><img src="21.jpg"></div>
+        <div><img src="22.jpg"></div>
+    </div>
+
+    <div id="accessories">
+        <p id="head">Accessories&nbsp;&nbsp;</p>
+        <div><img src="25.png"></div>
+        <div><img src="26.jpg"></div>
+        <div><img src="27.jpg"></div>
+        <div><img src="28.jpg"></div>
+        <div><img src="29.jpg"></div>
+    </div>
+
+
+    <div id="hairdryer">
+        <p id="head">HairDryers&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <div><img src="30.jpg"></div>
+        <div><img src="31.jpg"></div>
+        <div><img src="32.jpg"></div>
+        <div><img src="33.jpg"></div>
+        <div><img src="34.jpg"></div>
+    </div>
+
+    <div id="tv">
+        <p id="head">
+            TV's&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <div><img src="101.png"></div>
+        <div><img src="102.png"></div>
+        <div><img src="103.png"></div>
+        <div><img src="104.png"></div>
+        <div><img src="105.png"></div>
+
+    </div>
+
+    <div id="microwaves">
+        <p id="head">Microwaves&nbsp;&nbsp;</p>
+        <div><img src="99.png"></div>
+        <div><img src="98.png"></div>
+        <div><img src="97.png"></div>
+        <div><img src="96.png"></div>
+        <div><img src="95.png"></div>
+
+
+    </div>
+
+    <div id="PC">
+        <p id="head">PC's&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <div><img src="80.png"></div>
+        <div><img src="81.png"></div>
+        <div><img src="82.png"></div>
+        <div><img src="83.png"></div>
+        <div><img src="84.png"></div>
+    </div>
+
+</body>
+
+</html>

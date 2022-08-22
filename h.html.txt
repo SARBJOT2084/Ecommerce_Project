@@ -1,0 +1,9 @@
+<html>
+<head>
+<style>
+.d{background-color:cyan;}
+</style>
+<body>
+<div class="d">Div 1</div>
+</body>
+</html>

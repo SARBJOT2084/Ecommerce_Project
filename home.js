@@ -1,81 +1,66 @@
-// function myFunction() {
-//     var input, filter, ul, li, a, i, txtValue;
-//     input = document.getElementById("myInput");
-//     filter = input.value.toUpperCase();
-//     ul = document.getElementById("myUL");
-//     li = ul.getElementsByTagName("li");
-//     for (i = 0; i < li.length; i++) {
-//         a = li[i].getElementsByTagName("a")[0];
-//         txtValue = a.textContent || a.innerText;
-//         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-//             li[i].style.display = "";
-//         } else {
-//             li[i].style.display = "none";
-//         }
-//     }
-// }
-// function myFunction() {
-//     var x = document.getElementById("myDIV");
-//     if (x.style.display === "none") {
-//         x.style.display = "block";
-//     } else {
-//         x.style.display = "none";
-//     }
-// }
-// let slideIndex = 0;
-// showSlides();
+// To change light and dark mode
+function toggle_swipe() {
+    // if it is night then change to day
+    if (document.getElementById('sun').style.display === "none") {
+        document.body.style.color = "black";
+        document.getElementById('theme-toggler').style.backgroundColor = "#FDDA0D";
+        document.getElementById('i').style.color = "black";
+        document.body.style.backgroundColor = "white";
+        document.getElementById('i').style.backgroundColor = "white";
+        document.getElementById('moon').style.display = "none";
+        document.getElementById('sun').style.display = "block";
+        document.getElementById('toggle-switch').style.left = "55%";
+        document.getElementById('hh').style.color = "white";
+        document.getElementById('i').style.transitionDuration = "0.5s";
+    }// else change to night mode 
+    else {
+        document.getElementById('theme-toggler').style.backgroundColor = "#03004b";
+        document.getElementById('moon').style.display = "block";
+        document.getElementById('sun').style.display = "none";
+        document.body.style.color = "white";
+        document.getElementById('i').style.backgroundColor = "#343a40";
+        document.getElementById('i').style.color = "white";
+        document.getElementById('i').style.transitionDuration = "0.5s";
 
-// function showSlides() {
-//     let i;
-//     let slides = document.getElementsByClassName("mySlides");
-//     let dots = document.getElementsByClassName("dot");
-//     for (i = 0; i < slides.length; i++) {
-//         slides[i].style.display = "none";
-//     }
-//     slideIndex++;
-//     if (slideIndex > slides.length) { slideIndex = 1 }
-//     for (i = 0; i < dots.length; i++) {
-//         dots[i].className = dots[i].className.replace(" active", "");
-//     }
-//     slides[slideIndex - 1].style.display = "block";
-//     dots[slideIndex - 1].className += " active";
-//     setTimeout(showSlides, 2000); // Change image every 2 seconds
-// }
-function w3_open() {
-    document.getElementById("main").style.marginLeft = "25%";
-    document.getElementById("mySidebar").style.width = "25%";
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("openNav").style.display = 'none';
+        document.body.style.transform = "2s";
+        document.body.style.color = "black";
+        document.getElementById('toggle-switch').style.left = "9%";
+        document.getElementById('moon').style.display = "block";
+        document.getElementById("hh").style.color = "black";
+    }
+
 }
-function w3_close() {
-    document.getElementById("main").style.marginLeft = "0%";
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("openNav").style.display = "inline-block";
-}
+
 function Mobiles() {
     document.location.href("categories.html#smartphones");
 }
-/*map api */
+$(document).ready(function(){
+    $(window).on('scroll', function () {
+        if ($(this).scrollTop() < 15) {
+            $('.hidden').fadeIn(2000).removeClass('hidden');
+            $('.hidden1').fadeIn(1800).removeClass('hidden1');
+        }
+
+
+    });
+});
+
+//Map api
 // Initialize and add the map
 function initMap() {
     // The location of Uluru
-    const uluru = { lat: -25.344, lng: 131.031 };
+    //30.520084610672846, 76.65925395214865
+    const uluru = { lat: 30.520084610672846, lng: 76.65925395214865 };
     // The map, centered at Uluru
     const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 4,
-        center: uluru,
+      zoom: 4,
+      center: uluru,
     });
     // The marker, positioned at Uluru
     const marker = new google.maps.Marker({
-        position: uluru,
-        map: map,
+      position: uluru,
+      map: map,
     });
-}
-
-window.initMap = initMap;
-function change() {
-    var x = document.getElementById("ff");
-    // var img = document.getElementById("img");
-    x.style.backgroundColor = "black";
-
-}
+  }
+  
+  window.initMap = initMap;

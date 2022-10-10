@@ -5,111 +5,316 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="shopping-cart.png" type="image/x-icon">
-    <title>Demo Page </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <!--google montesserat font-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <!--google ubuntu font -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="shopping-cart.png" type="image/x-icon">
+    <!--Bootstrap 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <!--Font Awesome-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--logo-->
+    <title>Latest Reviews 🔥🔥</title>
     <style>
-        td {
-            padding: 12px;
+        .card img {
+            transition: transform 1.2s ease-in-out;
+
         }
 
-        p {
-            font-size: 30px;
-            font-family: Georgia, 'Times New Roman', Times, serif
+        #hidden_over {
+            background: rgba(0, 0, 0, 0.45);
         }
 
-        .main-div {
-            width: 80%;
-            /* height: 650px; */
-            margin-left: 12%;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            z-index: 4;
-            border-radius: 25px;
-            background-color: white;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            justify-content: center;
+        .card {
+            overflow: hidden;
         }
 
-        .main-div div {
-            margin: 50px 100px;
-            text-align: center
+        .card:hover img {
+            transform: scale(1.5, 1.5);
         }
 
-        .main-div iframe {
-            height: 200px;
-            width: 400px;
+        #i {
+            background-color: #212529;
         }
 
-        body {
-            background-size: 100% 120vh;
-            background-repeat: no-repeat;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("feedback_img.jpg");
-            background-size: cover;
+        /*links*/
+        .h {
+            padding-bottom: 0;
         }
 
-        p {
-            font-size: 34px;
+        .h a {
             color: white;
-            margin-left: 40%;
-            margin-top: 1%;
+        }
+
+        .h:hover {
+
+            background-color: white;
+            /* outline: 2px solid white; */
+            border-radius: 5%;
+        }
+
+        .h:hover a {
+            color: black;
+        }
+
+        /*searchbar*/
+        #searchbar {
+            width: 370px;
+            outline: none;
+            height: 2rem;
+            padding-left: 30px;
+            padding-right: 30px;
+            border: 0px;
+            left: 40%;
+            top: 22%;
+            position: absolute;
+        }
+
+        #microphone {
+            left: 65%;
+            top: 35%;
+            position: absolute;
+        }
+
+        #search_button {
+            position: absolute;
+            left: 40.36%;
+            top: 30%;
+        }
+
+        /*theme toggler*/
+        #theme-toggler {
+
+            height: 43px;
+            width: 86px;
+
+            left: 70%;
+            border: 2px solid #868e96;
+            background-color: #03004b;
+            position: absolute;
+
+        }
+
+        /*Switch*/
+        #toggle-switch {
+            opacity: 0.8;
+            border: 3px solid #868e96;
+            width: 33px;
+            height: 33px;
+            top: 10%;
+            left: 8%;
+            background-color: white;
+            position: absolute;
+
+        }
+
+        /* light mode */
+        #sun {
+
+            top: 1%;
+            right: 5%;
+            position: absolute;
+            display: none;
+
+        }
+
+        /* dark mode */
+        #moon {
+            position: absolute;
+            margin-right: 10%;
         }
     </style>
 </head>
 
-<body><br>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top pt-2 pb-2" id="i">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <span class="navbar-toggle r-icon"></span> -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-arrow-bar-down text-light" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM8 6a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 .708-.708L7.5 12.293V6.5A.5.5 0 0 1 8 6z" />
+            </svg>
+            <!-- <img src="https://img.icons8.com/external-those-icons-fill-those-icons/344/external-Sidebar-alignment-and-paragraphs-those-icons-fill-those-icons-2.png"  width="30" height="30"> -->
+        </button>
+        <a class="navbar-brand d-flex" href="home_page.html"
+            style="  font-family: 'Brush Script MT', cursive; color:rgb(104, 175, 241);"><img src="shopping-cart.png"
+                height="30" width="30" class="me-3 ms-3" id="logo-img">
+            <div>GadgetsCart.com</div>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+
+            <ul class="navbar-nav me-auto ps-3">
+
+                <li class="nav-item me-2 h">
+                    <a class="nav-link" id="hh" href="products.html">HOME</a>
+                </li>
+                <li class="nav-item me-2 h">
+                    <a class="nav-link" id="hh" href="contactus.html">CONTACT US</a>
+                </li>
+                <li class="nav-item me-2 h">
+                    <a class="nav-link" id="hh" href="products.html">PRODUCTS</a>
+                </li>
+
+
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <a href="login.html" class="btn btn-primary text-light me-4">Login</a>
+                <p class="text-light">OR</p>
+                <a href="signup.html" class="btn btn-primary ms-4 text-light me-5">Signup</a>
+                <!--theme toggler-->
+                <!-- <div id="theme-toggler" class=" d-flex rounded-pill shadow">
+                    <button style="background:transparent;border:none;" onclick="toggle_swipe()">
+                        <div class=" rounded-circle" id="toggle-switch">
+                            <div id="moon"><img style="margin-top:-11%;margin-left:-8%;"
+                                    src="https://cdn-icons-png.flaticon.com/512/3543/3543618.png" width="35"
+                                    height="35"></div>
+                            <div class="ms-2" id="sun"><img
+                                    src="https://cdn-icons-png.flaticon.com/512/2917/2917242.png" width="25"
+                                    height="25"></div>
+                        </div>
+                    </button>
+                </div> -->
+            </ul>
+
+        </div>
+        <!--searchbar-->
+        <div>
+            <input type="search" class="rounded" id="searchbar"
+                placeholder="Search for all Electronics Item,Brands and More...">
+            <!--search button-->
+            <!-- <i class="fa fa-search" aria-hidden="true" id="search_button"></i> -->
+            <img src="search_icon.png" height="20" width="20" id="search_button">
+            <i class="fa-sharp fa-solid fa-microphone" id="microphone"></i>
+        </div>
+
+    </nav>
+
+    <br><br><br><br>
     <!---Laptop-->
-    <p>Product Demos</p>
-    <div class="main-div">
-        <div>
-            <iframe class="a" src="https://www.youtube.com/embed/Js6LrcWIjqk"
-                title="Nothing Phone (1) Exclusive - 5X GIVEAWAY🔥🔥🔥" frameborder="0"
+    <p class="display-4 ms-3">Watch reviews of most trending Tech</p>
+    <p class="display-6 ms-3">Expert Reviews</p>
+    <div class="row ms-3">
+        <div class="col-lg-8 col-12">
+            <iframe width="974" height="487" src="https://www.youtube.com/embed/v94jRN2FhGo"
+                title="iPhone 14 Review: Repackaging 101!" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
-            <h2>Nothing Phone 1</h2>
         </div>
-        <div>
-            <iframe class="a" src="https://www.youtube.com/embed/pQvPQLdJY6o"
-                title="Sony X75K TV ⚡ Sony X74K TV ⚡ Unboxing & Review ⚡ Best 43 Inch 4K TV ⚡ Best TV in India 2022"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-            <h2>Sony X75K</h2>
+        <div class="col-lg-4 col-12">
+            <h1 class="display-5 mb-5"> Recently Launched</h1>
+
+            <h1 class="display-6 mt-5 mb-5"> <i class="fa-brands fa-apple"></i>&nbsp;Apple iphone 14</h1>
+            <h1 class="display-4 mt-5">Starts From Rs70,000</h1>
+            <div class="text-muted" style="font-size:14px;">
+                *May vary for different variants
+            </div>
         </div>
-        <div>
-            <iframe class="a" src="https://www.youtube.com/embed/ovgqr3fQ6wg"
-                title="Apple's NEW iMac 2021 Unboxing and Quick Look ! *M1 Magic*" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-            <h2>Apple IMac</h2>
+
+        <p class="display-4">
+            Newly Launched Tech
+        </p>
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                <div class="card rounded">
+
+                    <img height="500"
+                        src="https://i.gadgets360cdn.com/large/google_pixel_7_pro_google_1653747005526.jpg">
+                    <div class="card-img-overlay" id="hidden_over">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12 text-center">
+                <img height="185"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUgAAACaCAMAAAD8SyGRAAABblBMVEX///////3//f/8/Pz///z9///BwcHa2tr///r7///n5+fg4OD9//27u7v//P+urq7w+PTU1NTNzc2p0rP19fUxqlMlo0Xu7u60tLTHx8epqan7vADz//////b/+f/4+PjF3ew+hPQ7gfYgpUT9uQA7hvPrQjM6fevqOir5vgD/8/FGhePf7fasweNsn+5EiO4zgv9Zle6Qtd90p/GgxOuMqe+YmJh7su5tneKwyeajwd5+rOIte/CUvfXj6vLj+Puxz/fW6P2UrtD6+tj7/er02tn3lpHrcGTkXVH2gHzyv7r58bT71m76xVv0xEL57Ka72/X2rKPbSTr0tyj89czzz8TmXlHqhX7gODHfTERvm/JVh+Hfo5r1v77Ubl3425/choL/4tvmmZD4dXFWidPnRy301lTpNxz62X3aZmLlkJXxMij8s7HRSj/tQj3x3I3K2/64x/7gPBryxzvQXk7dWFnA2Mhptn9muHVek/Y1KksLAAALkUlEQVR4nO2bjV8TRxrHZ3Z3YAaWQGjahJA17EpeCCkLCIonFHIQ9VBAAzmiaC0WTj0U6VWv1//+fjObhJdKS+XTj7F9viLmbUP45pnnZTYyRhAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRCfBUq5kjcv81995K/B+ccf+ydACa0A/7qudDgX4rJPeOkn+EzxoliMfn3huu5HP5O4/Jvw+eO6tiM9TzLrU7+Sz5YrTEphxZAnEU/WZURaJ77/BZESqzlme672eKmlHTk8v+LYNr40J2+70BPbF3zcJ4UjFLknlVZ62aqLt8Hlv/JO2B/nw/48ROLLY+WvJ8JgMpiaHrnEU0FjIpFQ591t/9bF8+lJfPyr+oPhjrI8dYVLZcW88rUg5/uBj7/B1AjSpRMtUMvSq5W7rs6fbitexZny3MyKaJ3YF199eXXAwiMQmML0VcLkXo1t9/Q26Wnb641fSGRf92V/3z8OrixIFMLjbMbP+UEu8HO5AN/8WcUtpaBTtX0dm9OGOZfSaedCXJGOuWBEfjXQPujMT7T7+7oMqVS6KxGFYt/15EVMdnWwSFdYyIo6Nd4IEIiFuZmbN/92Kyz4/vwCoiyGu4Vp0qOHG5XaIG9m0rYmFyJNtJ4V2Yzddhm3+3talxJD6ehyInmhvNnBIrlkurwom91CNE7e+saEn7c4E07OWQ6THm/WYN40FolEHEKapY//RWX6pUhj0m0pNyLtZu3oTZu0d6aIn0dnizSpji9Nhn54UyFCYxY6Slb5ewZ+hS1g1tJJEivcSNRH6QuIUi3UaYuMEqkQLZHmDn2UMg5Vq4y3I9LI6xqKLl/o1XawSIhRrrKsTM4vBDcZflkhpcWlriuS627SWECtcF0TVE1vsOYK3Si1V6zjQat0TovEYaZGWdZxfj1e2tpfMt28YFw2Gxy7afkE5loni2QOQ+Fm00iQC0rFot0KR0KLXrxCaVGQ4wCuZUTFBUkyFoMc12kvbYiOrp4S6XKbo3KfHHROi8ymE3CU1UUnaxKlcWlnW0kzm0wms62I7WiRiD8lVegH4aIds3VR0auVS8sSSu9lML247VIywaNSE4l05PLyijZ7PMEMDCRwmCnj7RwpmJtMJsxTfDAicS2VxPfePl16Ut3t4aWvy1y046l0Kt0/lI0e3NEiHUu5TmXez00rHXTQZ3Kfa8UQYxDjMlG9fefu3Tv/WL0idKYTCNh799fW19fub3iWLtWIOPVgYmpn6loltrCwUHZMH8muKFZ6eOc9jqx7QsVaQXlKpI2I1DWnTy/l3v6kLkFQ3p3OaqOJVJ++JdmFO/T1jhaJJOmwr9E4HjEtTQckggrV2NHBZcdc73ktb2jcqYoYYjGzfH9zeGx4eHR4c23LkrblOuW5cR+tZ278RlgojLAvvoRI1xb1fzaK5sjtkpKy+QNPiETIJdKmePeZa/E+G2lZiGQ6aRZ432DzcYMps9I7WSQ38pAi57/RXSCymb200GZJqdJ2w2iEkeKjXUSktbw2Co+jY/r7+rJlu7y8A42YiDAYhWFLJGOrtfxhMV/DocVtuz0RnazaWTaoFUYicUPfoAuvbmrQLOzoPqPUrPoOF6lz1w30kFmFBCcQno8LhZz5KgQ7Gfm8mN9/9KRef/rti3zjURYL9D5icf3Z1taz9bGx4bUVDEePMRLtLVWOpsdRs+ZHohGRlfLFw8Z2fbf6Hd6D17/Ikaaw9KR1ioxyJP4k0j1oFAZTLKpDyfbL7O23PwORFrsVhJMJIR1HuMx+jAnRn9QrNQgzuzV4rOqoLUFp8TnjW4jG9S2plFyB0tFnjC3NB8FsBqmTPQjbIhPi+Yt88YkHz/b3+8VHpfYMdGJpx69HaoxI29LCspCrm3Ss99Txy0z069s6WSRDF4kxGxFZEUiNaMHlrb29vZ2dvb3xABH5sJhvPEVtF7Zy7hYP9wX71/DY6BbaImmL5c3R0fWVzEQQjGewctH7LPl+oRWR+/n8t45gpfo2kuyLJ60faPcPDWrig6jIyahKRxGJRe0Oddnp3uiBp7SZ4t7ZIqUl2UghCGZMt2JZMtNkNggm2Kti/r10Xa7nk6cvDotVhdz4I2YeGGfs5fDw8L3Fgp9bcKTrWC4rj7dEZqoIyFVWev2qUSzm3/y72vqBdmooHh+M429vorU1GeVIfa4om+ofag7wfV3xY8xQ3tEiHRmTKobVPIVhhQkHZRPVWtjcnfILN+TdYn5buBbmFSmh5qCusJxfcssRMcmtDYjcqMznckdICxDJ1VzQisjqQf7g9e03yI+NV6sl1t6fPFm1W3u1LZHKdruvJ+1IZCqK3CYdv7QxEUqX3fL9+ZtYm9LT20F6/OaVgl9Y8u7mIRI9JTpGVX1xeFD3RkfH3uplLFBgN9AFbTyY9wtH3EbTiTzREvlVpn5Qy9eKB8U339Udxo/PXTRFRmcc2OmItNEOdaVEdGOq59QL7fBiw5DFbE/B2uR4hVu2g9KDXpFLNYFeZlFiaX8fQ/sobU+sIiKrCl3PfYHeEYubvcU6v1cu+P4P3OUcN1352W+J3H2RP8w37j6sMnSUym2Pzqcnm5MRqdWm4qzZ/LC+3rN7GZ0s0lRtdOIL85O5qQrjGCxcvV+rZguYvhlDqT7cFcJB7rS2i8ViTK0PD48to2nHDLmyPja6vqx2/NyE0vIlOwpyraXND/KN/GpJCOmKkjxvRIxoFRvTOiaidpwNDp59WAeL5BLjsmUhAB+j3wmXMmbOZqoyN+/7Ia7VG5hoSqg0ij/9Dxprxu4hL95fESImPF1rXkpnwc8VloTjSPnNRK4tkun2cVUXMFHa/m73AiJ1W5nQo2LaRGJP6uzmWgeLxIQoUDRsjy1OFHJBYW/hqFI5WpobR4uNpc4F2y428q/qpdLuEz3hVF0lf0SWfLm1vLz1dnR4eHPZlYtolAoLlUzmCO9GEERLe8AtNfKH+092S6X6q3zxzXHVPkck091ir/E51Gfis7/3zMM6WaQ+eah3fKDjmj5XE/jj46Gv2ak4ruJiF1myuP/ufW3fBBhmxK1NCBxeX98cw4z4TDDHOTLe9/YKOfyrRV5FjnTYar6xn3/z7l0NKeFd6bciEu66hpqbkmkzEfb0R5050+ci9PcOFykxpQgnxtXSTs7Xew8BlmphdhGpP4ZRvHpnv3GYRy+Yrz0UnhKWuLeG2RAykSA3pN4JxkRjzj1OFiZCFBvxxdWrWNrSef1GD+l4I4rbpfbP+6DILl3B4+21nLyeNJto/dHmBUK1W9f4oQ4WqXcYHV1wFMruwNLETlgIw/DxbMXV/U3M0ZXi9Z1arVF7f3vXFTKGnlIsv13bHBvbXHu5hcbP4bbFy7M744Vw54dy6OdG2H9/+ul/WiSr3r7bqNVqd15n2fE2WvrsimWsW0+DPeljw3GMilDbne7qSSZ7uiKPnXw6NvpAhN6IlMqTKAyL5ZGRkcWM3k2zLAe3YFxh3m59dbeEei4szpU+ZuXexsa9FYaK43KUeMUcHFge4OXcZFBBZ65WrjDdx8tS9Wl9N4tOoHXyy7Y/cJo/oSMveWLnPNtrRLJEPAXiemHjWrJzPyBwedDdMFGu6M1gzIwPgiCsuB7LOLHzDrA/eKrLjrLjiWv2iY+22K1TOX9iMI2Up8PxMnKtJ9Scn5tS5uzFp35dnx8Wx4zoT1QQmtkFPwxnpEMiPwJdtGeDMBfOTk9PBf7kzxl9VkdI+tju7wQTDVPXAv1xIdM4VVhMJ0t+7qfRiA8j9Oel5Yz+tBBkXis7zPL06Rla278T/alS6bGBkZkbCw/KLrocrHVBIn8/mNQxSkZnW3XvqRe1K/7S/9eGIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiC+BT8H5YeRvyriOuDAAAAAElFTkSuQmCC">
+                <p class="display-5">Pixel 7 pro</p>
+
+                <p class="display-6">Starting From Rs.54,990/-</p>
+                <button class="btn btn-dark rounded">Buy Now</button>
+            </div>
+
 
         </div>
-        <div>
-            <!-- <p>Apple Airpods pro</p><br> -->
-            <iframe class="a" src="https://www.youtube.com/embed/cG8PXdTlDag"
-                title="AirPods Pro Review: Imperfectly Perfect!" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-            <h2>Apple Airpods Pro</h2>
+        <p class="display-5">Other Reviews </p>
+        <p class="display-6">Smartphones</p>
+        <div class="row">
+            <div class="col-3">
+                <iframe width="300" height="300" src="https://www.youtube.com/embed/ohltpJStiKc"
+                    title="Xiaomi 12S Ultra Review - This is Game-Changing." frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="col-3">
+                <iframe width="300" height="300" src="https://www.youtube.com/embed/uPxkrGL0l7U"
+                    title="Unboxing the Tesla Electro Phone!" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="col-3">
+                <iframe width="300" height="300" src="https://www.youtube.com/embed/qWIkBMNKj1s"
+                    title="Galaxy S22 Review: The iPhone of Android!" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="col-3">
+                <iframe width="300" height="300" src="https://www.youtube.com/embed/CMtF7nxMv5A"
+                    title="Pixel 7/Pro and Watch Impressions!" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
         </div>
-        <!-- <div>
-            <iframe class="a" src="https://www.youtube.com/embed/BsosQkfa2L8"
-                title="Apple Watch Series 7 Review: Spot the Differences!" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </div> -->
+        <p class="display-6">Laptops</p>
+        <div class="row">
+            <div class="col-3">
+                <iframe width="300" height="300" src="https://www.youtube.com/embed/HeMIZC2rkMo"
+                    title="M2 MacBook Air Review: More Than a Refresh!" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="col-3">
+                <iframe width="300" height="300" src="https://www.youtube.com/embed/HtOTt2N8fe0"
+                    title="Dell Inspiron 14 2-in-1 2022 Unboxing & First Impressions⚡Your Go-To Laptop For Everything*"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="col-3">
+                <iframe width="300" height="300" src="https://www.youtube.com/embed/6fPj6mj-M_k"
+                    title="XPS 13 Plus - Cleaner And Faster Than A MacBook!" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="col-3">
+                <iframe width="300" height="300" src="https://www.youtube.com/embed/ciqX1l3s2F8"
+                    title="XPS 13 Plus vs M2 MacBook Pro - Best Laptop in 2022?" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
 
+        <script>
 
-
-
-    </div>
-
-
-
-
-
-
-
+        </script>
 </body>
+
 
 </html>
 <!---earbuds , smartphones , smart tv,computer ,iwatch-->

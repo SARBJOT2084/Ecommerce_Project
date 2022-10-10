@@ -1,166 +1,248 @@
 <!DOCTYPE html>
+<!--Html 5-->
 <html>
 
 <head>
-    <!--favicon icons-->
-
-    <!--Responsive page-->
+    <!--google font api -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-
+    <!--google montesserat font-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <!--google ubuntu font -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="shopping-cart.png" type="image/x-icon">
+    <!--Bootstrap 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <!--Font Awesome-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--logo-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Home Page | GadgetsCart </title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
+    <title>Home Page | GadgetsCart </title>
     <link rel="stylesheet" href="home.css">
-    <script src="home.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body id="ff">
-    <div class="nav_bar">
-        <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
-            <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
-            <a href="#" class="w3-bar-item w3-button">Link 1</a>
-            <a href="#" class="w3-bar-item w3-button">Link 2</a>
-            <a href="#" class="w3-bar-item w3-button">Link 3</a>
-        </div>
-        <!-- <i class="fa fa-shopping-cart"></i> -->
-        <button class="side-button" onclick="w3_open()">&#9776;</button>
-        <a class="imglink" href="home_page.html"><img src="shopping-cart.png" href="home_page.html" class="imglink"></a>
-        <br>
-        <p class="shad-logo">GadgetsCart.com</p>
-        <!-- <a href="home_page.html">Home</a> -->
-        <a href="products.html">Products</a>
-        <a href="contactus.html">Contact </a>
-        <a href="demo.html">
-            Reviews
+    <!--navbar-->
+
+    <nav class="navbar navbar-expand-lg fixed-top pt-2 pb-2" id="i">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <span class="navbar-toggle r-icon"></span> -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-arrow-bar-down text-light" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM8 6a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 .708-.708L7.5 12.293V6.5A.5.5 0 0 1 8 6z" />
+            </svg>
+            <!-- <img src="https://img.icons8.com/external-those-icons-fill-those-icons/344/external-Sidebar-alignment-and-paragraphs-those-icons-fill-those-icons-2.png"  width="30" height="30"> -->
+        </button>
+        <a class="navbar-brand d-flex" href="home_page.html"
+            style="  font-family: 'Brush Script MT', cursive; color:rgb(104, 175, 241);"><img src="shopping-cart.png"
+                height="30" width="30" class="me-3 ms-3" id="logo-img">
+            <div>GadgetsCart.com</div>
         </a>
-        <input type="text" placeholder="search for all Electronic Appliances" onkeyup="myFunction()">
-        <br><br>
-        <!-- <ul id="myUL">
-            <li><a href="#">Adele</a></li>
-            <li><a href="#">Agnes</a></li>
-
-            <li><a href="#">Billy</a></li>
-            <li><a href="#">Bob</a></li>
-
-            <li><a href="#">Calvin</a></li>
-            <li><a href="#">Christina</a></li>
-            <li><a href="#">Cindy</a></li>
-        </ul> -->
-
-        <br>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 
 
+            <ul class="navbar-nav me-auto ps-3">
 
-        <button id="searchbutton">
-            <i class="fa fa-search" id="search"></i>
-        </button>
-        <!-- <img src="searching.png" id="search"> -->
-        <div id="a">Already a customer</div>
-        <!-- <button style="background-color:transparent; border:0px;margin-right:20px;" onclick="change()"><img
-                src="D:\Desktop\5th sem\Front_End\javascript\sun.png" width="30" height="30" id="bbb"></button> -->
-        <button class="signup" onclick="window.location.href='login.html'">Login</button>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <button class="signup" onclick="window.location.href='signup.html'">Register</button>
+                <li class="nav-item me-2 h">
+                    <a class="nav-link" id="hh" href="products.html">PRODUCTS</a>
+                </li>
+                <li class="nav-item me-2 h">
+                    <a class="nav-link" id="hh" href="contactus.html">CONTACT US</a>
+                </li>
+                <li class="nav-item me-2 h">
+                    <a class="nav-link" id="hh" href="demo.html">REVIEWS</a>
+                </li>
 
-    </div>
-    <div class="container">
-        <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide"><img src="img4.jpg"></div>
-                <div class="swiper-slide"><img src="img5.jpg"></div>
-                <div class="swiper-slide"><img src="img6.jpg"></div>
 
-                ...
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <a href="login.html" class="btn btn-primary text-light me-4">Login</a>
+                <p class="text-light">OR</p>
+                <a href="signup.html" class="btn btn-primary ms-4 text-light me-5">Signup</a>
+                <!--theme toggler-->
+                <!-- <div id="theme-toggler" class=" d-flex rounded-pill shadow">
+                    <button style="background:transparent;border:none;" onclick="toggle_swipe()">
+                        <div class=" rounded-circle" id="toggle-switch">
+                            <div id="moon"><img style="margin-top:-11%;margin-left:-8%;"
+                                    src="https://cdn-icons-png.flaticon.com/512/3543/3543618.png" width="35"
+                                    height="35"></div>
+                            <div class="ms-2" id="sun"><img
+                                    src="https://cdn-icons-png.flaticon.com/512/2917/2917242.png" width="25"
+                                    height="25"></div>
+                        </div>
+                    </button>
+                </div> -->
+            </ul>
+
+        </div>
+        <!--searchbar-->
+        <div>
+            <input type="search" class="rounded" id="searchbar"
+                placeholder="Search for all Electronics Item,Brands and More...">
+            <!--search button-->
+            <!-- <i class="fa fa-search" aria-hidden="true" id="search_button"></i> -->
+            <img src="search_icon.png" height="20" width="20" id="search_button">
+            <i class="fa-sharp fa-solid fa-microphone" id="microphone"></i>
+        </div>
+
+    </nav>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img style="width:100%;"
+                    src="https://images.samsung.com/is/image/samsung/assets/in/offer/online/samsung-fest/revamp/book2-1440x640-260922.jpg?imwidth=2560"
+                    class="d-block" alt="Image Not Available" height="750">
+
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+            <div class="carousel-item">
+                <img style="width:100%;" src="img5.jpg" class="d-block" alt="Image Not Available" height="750">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Asus Rog Zephyrus Duo 15 se</h5>
+                    <p>Starting From Rs.89,000</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img style="width:100%;" src="img4.jpg" class="d-block" alt="Image Not Available" height="750">
+                <div class="carousel-caption text-dark d-none d-md-block"><br><br><br><br>
+                    <h5>All New Samsung Products</h5>
+                    <p>20'22</p>
+                </div>
+            </div>
+            <div class="carousel-item">
 
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
+                <img src="https://www.apple.com/v/iphone/home/bk/images/overview/retail/why_apple__ezn1ktvka6oi_large.jpg"
+                    style="width:100%;" height="750">
+                <div class="carousel-caption text-dark d-none d-md-block" style="top:50%;">
+                    <h5 class="display-4 text-strong"><i style="font-size:60px;" class="fa-brands fa-apple"></i>iPhone
+                        14 & 14 pro</h5>
+                    <p class="display-6">Starts from Rs.79,900.00</p>
+                </div>
+            </div>
         </div>
-    </div>
-    <!-- 
-    <div class="slideshow-container">
-
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="lg.png" height="100" width="100" style="width:100%">
-            <div class="text">Caption Text</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
-            <img src="lenovo.png" style="width:100%">
-            <div class="text">Caption Two</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-            <img src="mi.png" style="width:100%">
-            <div class="text">Caption Three</div>
-        </div>
-        <div style="text-align:center">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
-    </div> -->
-    <!-- <img class="mid-image"></p> -->
-    <!-- <div class="imag-txt">Welcome to GadgetsCart.com<br>
-        <br>
-        <button>
-            <a href="signup.html">
-                <b>SIGN UP</b>
-            </a>
-
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
         </button>
-    </div> -->
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
+    <div class="hidden">
+        <p class="display-5 text-center mt-5">Choose your Category</p>
+        <br>
+        <!--Main Categories-->
+
+        <div class="main-categories">
+            <div class="sub-categories" onclick="window.location.href='categories.html#smartphones'"><img
+                    src="smart.jpg"><br>
+                <p class="label">Smartphones</p>
+                <p class="Little-text">From Rs.8,990</p>
+            </div>
+            <div class="sub-categories" onclick="window.location.href='categories.html#laptops'"><img
+                    src="laptop.jpg"><br>
+                <p class="label">Laptops</p>
+                <p class="Little-text">From Rs.38,990</p>
+            </div>
+            <div class="sub-categories" onclick="window.location.href='categories.html#tv'"><img src="tvv.jpg"><br>
+                <p class="label">TV's</p>
+                <p class="Little-text">From Rs.28,990</p>
+            </div>
+            <div class="sub-categories" onclick="window.location.href='categories.html#speakers'"><img
+                    src="speakers.jpg"><br>
+                <p class="label">Speakers</p>
+                <p class="Little-text">From Rs.8,990</p>
+            </div>
+            <div class="sub-categories" onclick="window.location.href='categories.html#accessories'"><img
+                    src="acc.jpg"><br>
+                <p class="label">Accessories</p>
+                <p class="Little-text">From Rs.1,990</p>
+            </div>
+
+        </div>
+    </div>
 
     <br>
 
-
-    <p
-        style="font-size:23px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-        Choose your category </p>
     <br>
-    <div class="main-categories">
-        <div class="sub-categories" onclick="window.location.href='categories.html#smartphones'"><img
-                src="smart.jpg"><br>
-            <p class="label">Smartphones</p>
-            <p class="Little-text">From Rs.8,990</p>
-        </div>
-        <div class="sub-categories" onclick="window.location.href='categories.html#laptops'"><img src="laptop.jpg"><br>
-            <p class="label">Laptops</p>
-            <p class="Little-text">From Rs.38,990</p>
-        </div>
-        <div class="sub-categories" onclick="window.location.href='categories.html#tv'"><img src="tvv.jpg"><br>
-            <p class="label">TV's</p>
-            <p class="Little-text">From Rs.28,990</p>
-        </div>
-        <div class="sub-categories" onclick="window.location.href='categories.html#speakers'"><img
-                src="speakers.jpg"><br>
-            <p class="label">Speakers</p>
-            <p class="Little-text">From Rs.8,990</p>
-        </div>
-        <div class="sub-categories" onclick="window.location.href='categories.html#accessories'"><img src="acc.jpg"><br>
-            <p class="label">Accessories</p>
-            <p class="Little-text">From Rs.1,990</p>
-        </div>
+    <div class="display-4 text-center">
+        Newly Launched<br>
+        <div style="display: inline-block;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-image: linear-gradient(90deg,#2ca2b4,#5598de 24%,#7f87ff 45%,#f65aad 76%,#ec3d43);
+        
+        font-weight:600;
+        background-color: #2ca2b4 0%;
+        " class="display-5 mb-5">iPhone 14 and iPhone 14 plus</div>
+        <p style="font-size: 96px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    font-family: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;">
+            Wonderfull.</p>
 
     </div>
-    <p id="top-brands">Top Brands </p>
+    <div class="text-center">
+        <img src="https://www.apple.com/v/iphone-14/b/images/overview/hero/hero_all_colors__dvlwc1u257qu_large_2x.jpg"
+            style="width:80%;height:600px;">
+        <p style="font-size: 24px;
+            line-height: 1.1666666667;
+            font-weight: 600;
+            letter-spacing: .009em;
+            font-family: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;">From ₹79900.00* before
+            trade‑in</p>
+        <br>
+        <br>
+        <a href="https://www.apple.com/105/media/in/iphone-14/2022/4adfce70-3eac-4182-946e-2539148438af/films/product/iphone-14-product-tpl-in-2022_16x9.m3u8"
+            class="text-primary text-decoration-none" style="letter-spacing: inherit;font-size: 24px;
+        line-height: 1.1666666667;
+        font-weight: 600;
+        letter-spacing: .009em;
+        font-family: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif; ">Watch the film <i
+                class="fa-solid fa-play"></i></a>
+        <a style="letter-spacing: inherit;font-size: 24px;
+line-height: 1.1666666667;
+font-weight: 600;
+letter-spacing: .009em;
+font-family: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;"
+            class="text-primary text-decoration-none ms-5" href="https://www.apple.com/in/apple-events/">Watch the
+            Event<i class=" ms-3 fa-solid fa-arrow-right"></i> </a>
+    </div>
+
+    <p id="top-brands" class="ms-5">Our Partners</p>
     <div class="brands">
         <div class="br-name"><img src="lg.png"><br>
             <p class="label">LG</p>
@@ -185,54 +267,6 @@
             <p class="label">Bose</p>
         </div>
     </div>
-    <br>
-
-    <br>
-    <h1>Our Users Reviews</h1>
-    <!--customer  reviews-->
-
-    <div class="reviews">
-        <!--Customer feedback-->
-        <div class="boxes"><img src="cstmr.jpg">
-            <div id="al">
-                <div class="div-rating">4&#9733;</div>
-                <p style="font-size:10px;">Rajiv Singla<br></p>
-            </div>
-
-            <p>From Delhi</p>
-
-            <p>Amazing Products Just Loved it. </p>
-        </div>
-        <div class="boxes"><img src="cstmr.jpg"><br>
-            <div id="al">
-                <div class="div-rating">3&#9733;</div>
-                <p style="font-size:10px;">Ram Sharma<br></p>
-            </div>
-            <p>Easy to use Website </p>
-        </div>
-        <div class="boxes"><img src="user3.jpg"><br>
-            <div id="al">
-                <div class="div-rating">5&#9733;</div>
-                <p style="font-size:12px;">Sohan Gupta<br><br>Good Customer Care </p>
-
-            </div>
-        </div>
-        <div class="boxes"><img src="=user3.jpg"><br>
-            <div id="al">
-                <div class="div-rating">4&#9733;</div>
-                <p style="font-size:12px;">Raghav Sharma<br><br>
-                    Amazing products </p>
-            </div>
-        </div>
-        <div class="boxes"><img src="cstmr.jpg"><br>
-            <div id="al">
-                <div class="div-rating">4&#9733;</div>
-                <p style="font-size:12px;">Shubham Gupta<br><br>Good user interation </p>
-                <br><br>
-
-            </div>
-        </div>
-    </div>
     <p style="color:#ff6600;font-size:40px; text-align:center;font-family:Arial, Helvetica, sans-serif;">Share your
         Feedback</p>
     <button id="bb">
@@ -240,67 +274,60 @@
 
     </button>
     <br>
-    <div id="footer">
-        @Copyright 2022 GadgetsCart.com
-        <br>
-        <!-- <div id="map"></div> -->
-        <table>
-            <tr>
-                <td>
-                    Developer:
-                </td>
-                <td>
-                    Sarbjot Sharma
-                </td>
+    <div class="footer" style="border-top:2px solid rgb(182, 176, 176);">
+        <div style="display:flex;">
 
-            </tr>
-            <tr>
-                <td>
-                    Email Id :
-                </td>
-                <td>
-                    sarbjot852@gmail.com
-                </td>
-
-            </tr>
+            <div id="map"></div>
 
 
-        </table>
+
+
+            <div style="margin-left:10%;">
+                <div class="text-center mb-3" style="font-weight:550;font-family:'Montserrat',sans-serif;">
+                    Copyright@2022
+                    GadgetsCart.com
+                </div>
+                <div class="text-center">
+                    <div style="white-space:nowrap;"><strong>Developer Name - </strong>
+                        Sarbjot Sharma
+                    </div>
+                    <div style="white-space:nowrap;margin-right:7%;"> <strong>Email - </strong>
+                        sarbjot852@gmail.com
+                    </div>
+                    <div style="white-space:nowrap;margin-right:16%;"> <strong>Phone No. - </strong>
+                        9501724133
+                    </div>
+
+                </div>
+
+            </div>
+            <div style="margin-left:25%;">Get Connected with us<br><br><i class="fa-brands fa-github g"></i><i
+                    class="fa-brands fa-facebook f"></i><i class="fa-brands fa-linkedin l"></i><i
+                    class="fa-brands fa-square-instagram in"></i>
+                <br>
+                Subscribe to our newsletter<br>
+                <input type="email" style="font-size:17px;" placeholder="Email Address"><button type="button"
+                    class="btn btn-dark" style="font-size:15px;">Subscribe</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
     </div>
     </p>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <!--imageslider-->
-    <script>
-        const swiper = new Swiper('.swiper', {
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-
-            loop: true,
-
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-
-
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-            // And if we need scrollbar
-
-        });
-    </script>
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
         defer>
         </script>
 
-
+    <!--Google Map API (//AIzaSyAVUPa7sb_-GUpemYbsWbROa3ZXz9FVn30)-->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVUPa7sb_-GUpemYbsWbROa3ZXz9FVn30&callback=initMap&libraries=&v=weekly"
+        async>
+        </script>
+    <script src="home.js"></script>
 </body>
 
 

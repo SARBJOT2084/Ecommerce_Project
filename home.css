@@ -1,196 +1,177 @@
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    /* Styles */
-}
-
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) {
-    /* Styles */
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-    /* Styles */
-}
-
+/*navbar*/
+/*to change color of navbar on light dark mode switch */
 body {
-    margin: 0px;
-    /* background-color: #282828; */
-    /* color: white; */
+    margin: 0;
 }
 
-/*Navigation bar*/
-.nav_bar {
-    position: fixed;
-    z-index: 4;
-    height: 8.56%;
-    width: 100%;
-    padding-top: 20px;
-    background-color: #1A1A1A;
-    display: flex;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+#i {
+    background-color: #212529;
 }
 
-/*links on nav bar*/
-.nav_bar>a {
-    font-size: 20px;
+/*links*/
+.h {
+    padding-bottom: 0;
+}
+
+.h a {
     color: white;
-    margin-left: 2%;
-    margin-right: 2%;
-    text-decoration: none;
-    padding-top: 7px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-/* .nav_bar input{
+.h:hover {
 
-} */
-.nav_bar>a:hover {
-    color: rgb(84, 83, 83);
-
+    background-color: white;
+    /* outline: 2px solid white; */
+    border-radius: 5%;
 }
 
-
-
-
-/*logo*/
-
-.imglink {
-    height: 60px;
-    color: white;
-    margin-left: 1.5%;
-    margin-top: -1.55%;
+.h:hover a {
+    color: black;
 }
 
-.nav_bar>.shad-logo {
-    text-shadow: 1px 2px 1px rgb(108, 60, 227);
-    color: rgb(0, 200, 255);
-    font-size: 15px;
-    font-weight: bold;
-    margin-top: 2.4%;
-    margin-left: -5%;
-    font-family: "Arial", cursive;
-}
-
-/* .nav_bar>p {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    margin-left: 20px;
-    font-family: "Arial", cursive;
-} */
-
-
-
-/*Search Box*/
-.nav_bar input {
-
-
-    height: 37px;
-    width: 28%;
+/*searchbar*/
+#searchbar {
+    width: 370px;
     outline: none;
-    border-style: none;
-    border-bottom: 3px solid white;
-    color: black;
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-}
-
-.nav_bar>i {
-    font-size: 46px;
-    margin-left: 14%;
-}
-
-#searchbutton {
-    height: 42px;
-    background-color: rgb(0, 21, 255);
+    height: 2rem;
+    padding-left: 30px;
+    padding-right: 30px;
     border: 0px;
-    text-align: center;
-    width: 60px;
-    color: white;
-    border-top-right-radius: 10%;
-    border-bottom-right-radius: 10%;
+    left: 40%;
+    top: 22%;
+    position: absolute;
 }
 
-.nav_bar input::placeholder {
-    color: black;
-    margin-left: 55px;
+#microphone {
+    left: 65%;
+    top: 35%;
+    position: absolute;
 }
 
-#search {
-
-    font-size: 20px;
-    height: 20px;
-    margin-left: 10px;
+#search_button {
+    position: absolute;
+    left: 40.36%;
+    top: 30%;
 }
 
-.login {
+/*theme toggler*/
+#theme-toggler {
+
+    height: 43px;
+    width: 86px;
+
+    left: 70%;
+    border: 2px solid #868e96;
+    background-color: #03004b;
+    position: absolute;
+
+}
+
+/*Switch*/
+#toggle-switch {
+    opacity: 0.8;
+    border: 3px solid #868e96;
+    width: 33px;
+    height: 33px;
+    top: 10%;
+    left: 8%;
     background-color: white;
-    font-size: 25px;
-    border: 0px;
-    border-radius: 10px;
-    margin: auto;
-    height: 40px;
-    width: 150px;
-    color: #ff6600;
-    margin-right: 30px;
-    text-decoration: none;
-}
-
-
-
-.signup {
-    color: white;
-    font-size: 15px;
-    padding-left: 20px;
-    border: 0px;
-    border-radius: 10px;
-
-    height: 35px;
-    width: 130px;
-    background-image: linear-gradient(to bottom, rgb(0, 42, 255) 0%, rgb(0, 85, 255) 100%);
-    /* background-color: rgb(0, 21, 255); */
-    margin-left: -11px;
-    margin-right: 11px;
-    transition: transform 310ms ease-in-out;
-}
-
-
-
-.login:hover {
-    background-color: #ff6600;
-    color: white;
-}
-
-.signup:hover {
-    transform: scale(1.1, 1.1);
-    color: #ff6600;
-    background-color: white;
-    background: white;
-    transition: transform 310ms ease-in-out;
+    position: absolute;
 
 }
 
+/* light mode */
+#sun {
 
-/*signup-hover*/
-.signup a {
-    text-decoration: none;
-    color: white;
+    top: 1%;
+    right: 5%;
+    position: absolute;
+    display: none;
+
 }
 
-/* .signup a:hover {
+/* dark mode */
+#moon {
+    position: absolute;
+    margin-right: 10%;
+}
 
-    color: black;
-} */
+/*for giving fadein effect*/
+.hidden {
+    display: none;
+}
 
+/*google map api*/
+/*Google Map API*/
+/* Set the size of the div element that contains the map */
+#map {
+    height: 140px;
+    /* The height is 400 pixels */
+    width: 400px;
+    /* The width is the width of the web page */
+    object-fit: contain;
+}
 
 #a {
     color: white;
     font-size: 15px;
     margin-left: 5%;
 
+}
+
+.fa-brands {
+    margin-right: 10%;
+    font-size: 25px;
+}
+
+.g {
+    transition: transform 0.4s ease-in-out;
+}
+
+.g:hover {
+    color: red;
+    transform: scale(1.3, 1.3);
+}
+
+.f {
+    transition: transform 0.4s ease-in-out;
+}
+
+.f:hover {
+    color: #4267B2;
+    transform: scale(1.3, 1.3);
+}
+
+.l {
+    transition: transform 0.4s ease-in-out;
+}
+
+.l:hover {
+    color: #0319e1;
+    transform: scale(1.3, 1.3);
+}
+
+.in {
+    transition: transform 0.4s ease-in-out;
+}
+
+.in:hover {
+    color: #bc2a8d;
+    transform: scale(1.3, 1.3);
+}
+
+.card-body {
+    overflow: hidden;
+}
+
+.card-img img {
+    height: 150px;
+    width: 150px;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.card-img img:hover {
+    transform: scale(1.3, 1.3);
 }
 
 /*images on middle*/
@@ -414,103 +395,6 @@ body {
     position: fixed bottom;
 }
 
-/*image slider*/
-
-/*search most viewed items*/
-
-
-/* #myInput {
-    background-image: url('/css/searchicon.png');
-    background-position: 10px 12px;
-    background-repeat: no-repeat;
-    width: 100%;
-    font-size: 16px;
-    padding: 12px 20px 12px 40px;
-    border: 1px solid #ddd;
-    margin-bottom: 12px;
-}
-
-#myUL {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 3%;
-    margin-right: 5%;
-
-}
-
-#myUL li a {
-    border: 1px solid #ddd;
-    margin-top: -1px;
-    /* Prevent double borders */
-/* background-color: #f6f6f6;
-padding: 12px;
-width: 100px;
-text-decoration: none;
-font-size: 18px;
-color: black;
-display: block
-}
-
-#myUL li a:hover:not(.header) {
-    background-color: #eee;
-} */
-#myDIV {
-    display: block;
-}
-
-/*
-sidebar
-*/
-
-.side-button {
-    border: 0px;
-    background-color: transparent;
-    color: white;
-    font-size: 25px;
-    margin-left: 0px;
-}
-
-.container {
-    width: 100%;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-}
-
-.swiper {
-    width: 100%;
-    height: fit-content;
-
-}
-
-.swiper-slide img {
-    width: 100%;
-    height: 400px;
-}
-
-.swiper-wrapper {
-    margin-top: 4%;
-}
-
-/*for changing button colors */
-.swiper .swiper-button-prev,
-.swiper .swiper-button-next {
-    color: linear-gradient(to bottom, rgb(108, 60, 227) 0%, rgb(0, 200, 255) 100%);
-}
-
-/*for changing dots color */
-.swiper .swiper-pagination-bullet-active {
-
-    color: linear-gradient(to bottom, rgb(108, 60, 227) 0%, rgb(0, 200, 255) 100%);
-}
-
-.swiper .swiper-pagination-bullet {
-    height: 13px;
-    width: 13px;
-}
-
 /* map api */
 /* Set the size of the div element that contains the map */
 #map {
@@ -521,3 +405,83 @@ sidebar
     margin-top: 2%;
     /* The width is the width of the web page */
 }
+
+#logo-img div {
+    /* display:block; */
+}
+
+/* Media Queries */
+/*small screen (smartphones andriod)*/
+@media screen and (max-width:576px) {
+    #searchbar {
+        left: 19%;
+        right: 30%;
+        width: 290px;
+        top: 0.65%;
+        position: fixed;
+        margin-right: 50%;
+    }
+
+    #search_button {
+        position: fixed;
+        left: 20%;
+        right: 50%;
+
+        top: 1%;
+    }
+
+    #microphone {
+        left: 78%;
+        top: 1.2%;
+        position: fixed;
+    }
+
+    #logo-img {
+        top: 1%;
+        left: 5%;
+        position: fixed;
+    }
+
+    #logo-img div {
+        visibility: hidden;
+    }
+}
+
+/* medium screen (ipad,tablets) */
+@media screen and (max-width:1024px) and (min-width:577px) {
+    #searchbar {
+        left: 28%;
+        right: 50%;
+        width: 370px;
+        top: 1%;
+        position: fixed;
+    }
+
+    #search_button {
+        left: 28.56%;
+        right: 50%;
+
+        top: 1%;
+
+        position: fixed;
+    }
+
+    #microphone {
+        left: 71%;
+        top: 1.2%;
+        position: fixed;
+    }
+
+    #logo-img {
+        top: 1%;
+
+        left: 5%;
+        position: fixed;
+    }
+
+    #logo-img div {
+        visibility: hidden;
+    }
+}
+
+/* large screen */
